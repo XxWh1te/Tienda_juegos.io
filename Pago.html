@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago del Juego</title>
+    <link rel="stylesheet" href="pago.css"> <!-- Referencia al archivo CSS -->
+    <link rel="icon" href=" images/favicon.jpg" type="image/jpg">
+</head>
+<body>
+    <div class="formulario-pago">
+        <h1>Formulario de Pago</h1>
+        <form id="pago-form">
+            <!-- Campos del formulario -->
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="campo">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="campo">
+                <label>Método de Pago:</label>
+                <div class="imagenes-pago">
+            <label>
+                <input type="radio" name="metodo-pago" value="Visa" required>
+                <img src="metodo/VISA.png" alt="Visa">
+            </label>
+            <label>
+                <input type="radio" name="metodo-pago" value="PagoEfectivo" required>
+                <img src="metodo/PE.png" alt="PagoEfectivo">
+            </label>
+            <label>
+            <input type="radio" name="metodo-pago" value="PayPal" required>
+            <img src="metodo/PP.png" alt="PayPal">
+        </label>
+    </div>
+</div>
+
+
+            <div class="campo">
+                <button type="submit" class="btn-comprar">Finalizar Compra</button>
+            </div>
+        </form>
+
+        <div id="recibo" class="recibo">
+          <h2>Recibo de Compra</h2>
+              <p><strong>Nombre:</strong> <span id="recibo-nombre"></span></p>
+              <p><strong>Correo:</strong> <span id="recibo-correo"></span></p>
+              <p><strong>Juego Comprado:</strong> <span id="recibo-juego"></span></p>
+              <p><strong>Precio:</strong> <span id="recibo-precio"></span></p>
+              <p><strong>Método de Pago:</strong> <span id="recibo-pago"></span></p>
+              <p><strong>Fecha de Compra:</strong> <span id="recibo-fecha"></span></p>
+        </div>
+
+    </div>
+
+    <script src="pago.js"></script>
+
+</body>
+</html>
