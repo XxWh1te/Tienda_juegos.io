@@ -52,9 +52,6 @@ Este proyecto tiene como finalidad:
 * `contacto.css` → Estilos de la página contacto
 * `catalogo.js`  → Carga dinámica de información de los juegos
 * `img/` → Imágenes y recursos multimedia
-* `Pago.html` → Página de metodo de pago
-* `Pago.css` → Con su respectivo estilo
-* `Pago.js` → Con su propia carga de inforamcion dinamico
 * `modal.js` → Ventana emergente
 
 ---
