@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | GameCore</title>
+  <link rel="stylesheet" href="contacto.css" />
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="bg-video">
+    <source src="metodo/May waterfall desk anim HD.mp4" type="video/mp4">
+    Tu navegador no soporta el video de fondo.
+  </video>
+
+  <!-- Encabezado igual al del index -->
+  <header class="header">
+    <div class="menu">
+      <div class="container">
+        <a href="#" class="logo">GameCore</a>
+        
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Formulario de contacto -->
+  <main class="contacto-contenido">
+    <section class="formulario-container">
+      <h2>Contáctanos</h2>
+      <form id="form-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Popup de confirmación -->
+  <div id="popup-confirmacion" class="popup">
+    <div class="popup-content">
+      <p>MENSAJE ENVIADO, ESPERE SU RESPUESTA</p>
+      <button onclick="cerrarPopup()">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("form-contacto").addEventListener("submit", function(e) {
+      e.preventDefault(); // evita envío real
+      document.getElementById("popup-confirmacion").style.display = "flex";
+      this.reset();
+    });
+
+    function cerrarPopup() {
+      document.getElementById("popup-confirmacion").style.display = "none";
+    }
+  </script>
+</body>
+</html>
